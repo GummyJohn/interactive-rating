@@ -1,21 +1,29 @@
 const ratings = document.querySelectorAll('.rating');
 const btn = document.querySelector('.btn');
-console.log(ratings);
+const selected = document.querySelector('.selected');
+const container = document.querySelector('#first');
+const container2 = document.querySelector('#second');
 
 
-for(let i = 0; i<)
-
+ratings.forEach((rate) =>{
+  rate.addEventListener('click', () => {
+    rate.setAttribute('id', 'focus');
+  })
+});
 
 btn.addEventListener('click', () => {
-  console.log('worked');
+  const focus = document.querySelector('#focus');
+  
+  for(let i = 0; i < ratings.length; i++){
+    console.log(ratings[i]);
+  }
+
+
+  selected.innerHTML =
+    `You selected ${focus.value} out of 5`;
+        
+  container.classList.add('hide');
+  container2.classList.remove('hide');
+  selected.classList.remove('hide');
+       
 })
-
-
-// function colorChange(ele)  {
-//   let color = '#FF8000';
-//   ele.style.background = color;
-//   ele.style.color = 'white'; 
-// } 
-
-
-
